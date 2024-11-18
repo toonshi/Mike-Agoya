@@ -169,3 +169,23 @@ h3 {
   align-items: center;     /* Centers the button vertically (optional) */
           /* Make the container take up the full height of the viewport (optional) */
 }
+
+/* About Me Section */
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  padding: 4rem 2rem; /* Add padding as needed */
+  min-height: 100vh; /* Optional: makes the section take the full viewport height */
+  text-align: center;
+}
+
+#about header {
+  max-width: 800px;
+}
+
+#about .cta {
+  margin-top: 2rem;
+}
+
