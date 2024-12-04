@@ -1,10 +1,16 @@
 :root {
-  --primary-color: #FFBF00; /* Bright orange color */
-  --hover-color: #E0AC00;   /* Hover color */
-  --text-color: #D0D0D1;    /* Text color */
-  --background-color: #1D1E20; /* Background color */
-  --navbar-bg: #151618;     /* Navbar background */
-  --button-text-color: #151618; /* Text color for buttons */
+  --primary-color: rgb(240, 149, 12);
+  /* Bright orange color */
+  --hover-color: #E0AC00;
+  /* Hover color */
+  --text-color: #D0D0D1;
+  /* Text color */
+  --background-color: #1D1E20;
+  /* Background color */
+  --navbar-bg: #151618;
+  /* Navbar background */
+  --button-text-color: #151618;
+  /* Text color for buttons */
 }
 
 /* Global Styles */
@@ -19,7 +25,7 @@ body {
 /* Navbar */
 .navbar {
   background-color: var(--navbar-bg);
-  padding: 1rem 2rem; 
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +37,7 @@ body {
   margin: 0 1rem;
   font-weight: bold;
   font-size: 1rem;
-  transition: color 0.3s ease; 
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
@@ -55,18 +61,18 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  margin-top: 3rem; 
+  margin-top: 3rem;
 }
 
 /* Headings */
 h2 {
   font-size: 2.25rem;
   color: var(--primary-color);
-  margin-bottom: 1.5rem; 
+  margin-bottom: 1.5rem;
 }
 
 h3 {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   color: var(--text-color);
   margin-bottom: 1rem;
 }
@@ -102,8 +108,8 @@ h3 {
 }
 
 .project-card:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3); 
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Buttons in Projects */
@@ -118,15 +124,20 @@ h3 {
 /* Grid Styles for Skills Section */
 #skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic columns */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Dynamic columns */
   gap: 2rem;
-  padding: 2rem 1rem; /* Add some padding around the grid */
+  padding: 2rem 1rem;
+  /* Add some padding around the grid */
 }
+
 #projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic columns */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Dynamic columns */
   gap: 2rem;
-  padding: 2rem 1rem; /* Add some padding around the grid */
+  padding: 2rem 1rem;
+  /* Add some padding around the grid */
 }
 
 /* Skills Card Style */
@@ -165,19 +176,25 @@ h3 {
 
 .resume-section {
   display: flex;
-  justify-content: center; /* Centers the button horizontally */
-  align-items: center;     /* Centers the button vertically (optional) */
-          /* Make the container take up the full height of the viewport (optional) */
+  justify-content: center;
+  /* Centers the button horizontally */
+  align-items: center;
+  /* Centers the button vertically (optional) */
+  /* Make the container take up the full height of the viewport (optional) */
 }
 
 /* About Me Section */
 #about {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers content vertically */
-  align-items: center; /* Centers content horizontally */
-  padding: 4rem 2rem; /* Add padding as needed */
-  min-height: 100vh; /* Optional: makes the section take the full viewport height */
+  justify-content: center;
+  /* Centers content vertically */
+  align-items: center;
+  /* Centers content horizontally */
+  padding: 4rem 2rem;
+  /* Add padding as needed */
+  min-height: 100vh;
+  /* Optional: makes the section take the full viewport height */
   text-align: center;
 }
 
@@ -188,4 +205,3 @@ h3 {
 #about .cta {
   margin-top: 2rem;
 }
-
