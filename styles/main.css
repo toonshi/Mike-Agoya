@@ -7,36 +7,205 @@
   --button-text-color: #151618;
 }
 
+/* Global Styles */
 body {
   color: var(--text-color);
   margin: 0;
   background-color: var(--background-color);
   font-family: 'Figtree', sans-serif;
   line-height: 1.5;
-  overflow: hidden;
-  /* Prevent overflow */
 }
 
-#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+/* Navbar */
+.navbar {
+  background-color: var(--navbar-bg);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--hover-color);
+}
+
+/* General Section Styles */
+#feature {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+#content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Grid Styles */
+#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Headings */
+h2 {
+  font-size: 2.25rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.page-btn,
+.cta {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  margin: 1rem 0.5rem;
+}
+
+.page-btn:hover,
+.cta:hover {
+  background-color: var(--hover-color);
+}
+
+/* Project Section */
+.project-card {
+  background-color: var(--navbar-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons in Projects */
+.project-buttons {
   display: flex;
   justify-content: center;
-  align-items: center;
-  animation: dissolve 2s 3s forwards;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
+/* Grid Styles for Skills Section */
+#skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Dynamic columns */
+  gap: 2rem;
+  padding: 2rem 1rem;
+  /* Add some padding around the grid */
+}
+
+#projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Dynamic columns */
+  gap: 2rem;
+  padding: 2rem 1rem;
+  /* Add some padding around the grid */
+}
+
+/* Skills Card Style */
+.skills-card {
+  background-color: var(--navbar-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.skills-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.skills-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-card li {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.resume-section {
+  display: flex;
+  justify-content: center;
+  /* Centers the button horizontally */
+  align-items: center;
+  /* Centers the button vertically (optional) */
+  /* Make the container take up the full height of the viewport (optional) */
+}
+
+/* About Me Section */
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Centers content vertically */
+  align-items: center;
+  /* Centers content horizontally */
+  padding: 4rem 2rem;
+  /* Add padding as needed */
+  min-height: 100vh;
+  /* Optional: makes the section take the full viewport height */
+  text-align: center;
+}
+
+#about header {
+  max-width: 800px;
+}
+
+#about .cta {
+  margin-top: 2rem;
+}
+
+/* Eye Animation */
 .eye {
   position: absolute;
-  width: 10vw;
-  /* Use viewport width for responsiveness */
-  height: 5vw;
-  /* Use viewport width for responsiveness */
+  width: 150px;
+  height: 80px;
   background: radial-gradient(circle at center, rgb(240, 149, 12), black 70%);
   border-radius: 70% 30% 70% 30% / 50% 50% 50% 50%;
+  /* Sharp cat-eye shape */
   animation: eyeOpen 1s ease-out, eyeBlink 2s 1s ease-in;
 }
 
@@ -97,7 +266,7 @@ body {
 
 @keyframes dissolve {
   0% {
-    opacity: 1;
+    opacity: 2;
   }
 
   100% {
@@ -105,7 +274,19 @@ body {
   }
 }
 
-/* Media Query for mobile */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: dissolve 2s 3s forwards;
+}
+
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
   body {
     background-color: var(--background-color);
@@ -124,15 +305,18 @@ body {
   }
 
   .eye.left {
-    top: 35%;
-    left: 30%;
+    top: 40%;
+    left: 20%;
     transform: rotate(5deg);
+    /* Adjust the angle */
   }
 
   .eye.right {
-    top: 35%;
-    left: 65%;
+    top: 40%;
+    left: 75%;
+    /* Adjust the right eye position */
     transform: rotate(-5deg);
+    /* Adjust the angle */
   }
 }
 
@@ -146,9 +330,21 @@ body {
 
   .eye.left,
   .eye.right {
-    top: 30%;
+    top: 35%;
+    /* Adjust the vertical position */
+  }
+
+  .eye.left {
+    left: 10%;
+    /* Adjust the left eye position */
+    transform: rotate(5deg);
+    /* Adjust the angle */
+  }
+
+  .eye.right {
     left: 50%;
-    transform: translateX(-50%) rotate(0deg);
-    /* Center the eyes */
+    /* Adjust the right eye position */
+    transform: rotate(-5deg);
+    /* Adjust the angle */
   }
 }
