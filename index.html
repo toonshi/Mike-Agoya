@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Predator Eyes Animation</title>
+  <link rel="stylesheet" href="styles/main.css">
   <style>
     body {
       margin: 0;
@@ -11,84 +12,6 @@
       background-color: black;
     }
 
-    .eye {
-      position: absolute;
-      width: 150px;
-      height: 80px;
-      background: radial-gradient(circle at center, rgb(240, 149, 12), black 70%);
-      border-radius: 70% 30% 70% 30% / 50% 50% 50% 50%; /* Sharp cat-eye shape */
-      animation: eyeOpen 1s ease-out, eyeBlink 2s 1s ease-in;
-    }
-
-    .eye::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 30%;
-      height: 60%;
-      background: black;
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-    }
-
-    .eye.left {
-      top: 40%;
-      left: 35%;
-      transform: rotate(10deg);
-    }
-
-    .eye.right {
-      top: 40%;
-      left: 55%;
-      transform: rotate(-10deg);
-    }
-
-    @keyframes eyeOpen {
-      0% {
-        transform: scaleY(0.1) scaleX(0.6);
-      }
-      50% {
-        transform: scaleY(1.2) scaleX(1);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    @keyframes eyeBlink {
-      0%, 90% {
-        transform: scale(1);
-      }
-      95% {
-        transform: scaleY(0.1);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    @keyframes dissolve {
-      0% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-
-    #overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: dissolve 2s 3s forwards;
-    }
   </style>
 </head>
 <body>
@@ -99,7 +22,7 @@
 
   <script>
     setTimeout(() => {
-      window.location.href = 'index.html';
+      window.location.href = 'main.html';
     }, 5000); // Redirect after animation
   </script>
 </body>
