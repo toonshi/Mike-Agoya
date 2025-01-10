@@ -306,45 +306,43 @@ h3 {
 
   .eye.left {
     top: 40%;
-    left: 20%;
-    transform: rotate(5deg);
-    /* Adjust the angle */
+    left: 35%;
+    /* Remove or reduce the rotation */
+    transform: rotate(0deg);
   }
 
   .eye.right {
     top: 40%;
-    left: 75%;
-    /* Adjust the right eye position */
-    transform: rotate(-5deg);
-    /* Adjust the angle */
-  }
-}
-
-/* Further adjustments for very small screens */
-@media (max-width: 480px) {
-  .eye {
-    width: 40vw;
-    /* Even smaller eyes on tiny screens */
-    height: 20vw;
+    left: 55%;
+    /* Remove or reduce the rotation */
+    transform: rotate(0deg);
   }
 
-  .eye.left,
-  .eye.right {
-    top: 35%;
-    /* Adjust the vertical position */
-  }
+  /* Further adjustments for very small screens */
+  @media (max-width: 480px) {
+    .eye {
+      width: 40vw;
+      /* Even smaller eyes on tiny screens */
+      height: 20vw;
+    }
 
-  .eye.left {
-    left: 10%;
-    /* Adjust the left eye position */
-    transform: rotate(5deg);
-    /* Adjust the angle */
-  }
+    .eye.left,
+    .eye.right {
+      top: 35%;
+      /* Adjust the vertical position */
+    }
 
-  .eye.right {
-    left: 50%;
-    /* Adjust the right eye position */
-    transform: rotate(-5deg);
-    /* Adjust the angle */
+    .eye.left {
+      left: 10%;
+      /* Adjust the left eye position */
+      transform: rotate(5deg);
+      /* Adjust the angle */
+    }
+
+    .eye.right {
+      left: 50%;
+      /* Adjust the right eye position */
+      transform: rotate(-5deg);
+      /* Adjust the angle */
+    }
   }
-}
